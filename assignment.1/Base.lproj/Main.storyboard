@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="nAE-Sl-FY7" kind="show" id="M0N-tq-zO5"/>
+                                    <segue destination="nAE-Sl-FY7" kind="show" id="7W1-oX-NM1"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-jq-MoV">
@@ -38,8 +38,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="ggi-Xz-XLm" id="94d-Zs-auz"/>
                         <outlet property="text" destination="2qd-jq-MoV" id="pcZ-RV-4a2"/>
-                        <segue destination="nAE-Sl-FY7" kind="show" id="wJQ-8q-dGK"/>
+                        <segue destination="nAE-Sl-FY7" kind="show" identifier="toSecond" id="wJQ-8q-dGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="CLA-1R-PYW"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="second" id="CLA-1R-PYW"/>
                                 </connections>
                             </button>
                         </subviews>

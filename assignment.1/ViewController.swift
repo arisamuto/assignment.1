@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var text: UITextView!
     @IBOutlet var nextButton: UIButton!
-    @IBOutlet var textField1: UITextField!
     
     
     override func viewDidLoad() {
@@ -21,7 +20,14 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.cyan
         self.performSegue(withIdentifier: "toSecond", sender: nil)
+        
+        self.setNeedsStatusBarAppearanceUpdate()
     }
+    //ステータスバーを非表示にするためオーバーライドする
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     
     @IBAction func move(_sender: Any) {
         let storyboard: UIStoryboard = self.storyboard!

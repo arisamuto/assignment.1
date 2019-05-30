@@ -22,9 +22,6 @@
                                 <rect key="frame" x="162" y="517" width="90" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="nAE-Sl-FY7" kind="show" id="7W1-oX-NM1"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-jq-MoV">
                                 <rect key="frame" x="82" y="132" width="250" height="150"/>
@@ -58,6 +55,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8R-Fy-UMp">
                                 <rect key="frame" x="82" y="132" width="250" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,7 +81,4 @@
             <point key="canvasLocation" x="857" y="117"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wJQ-8q-dGK"/>
-    </inferredMetricsTieBreakers>
 </document>

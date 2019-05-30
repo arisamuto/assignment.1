@@ -9,12 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var text: UITextView!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var textField1: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor.cyan
+        self.performSegue(withIdentifier: "toSecond", sender: nil)
     }
-
-
+    
+    @IBAction func move(_sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let second = storyboard.instantiateViewController(withIdentifier: "second")
+        self.present(second, animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SecondViewController" {
+            _ = segue.destination as! SecondViewController
+        }
+        
+    }
 }
-

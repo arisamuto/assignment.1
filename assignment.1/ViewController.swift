@@ -8,20 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var text: UITextView!
+    @IBOutlet var textview: UITextView!
     @IBOutlet var nextButton: UIButton!
-    
+    @IBOutlet var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         view.backgroundColor = UIColor.cyan
-        self.performSegue(withIdentifier: "toSecond", sender: nil)
-        
-        self.setNeedsStatusBarAppearanceUpdate()
+      
     }
     //ステータスバーを非表示にするためオーバーライドする
     override var prefersStatusBarHidden: Bool {
@@ -30,18 +28,28 @@ class ViewController: UIViewController {
     
     
     @IBAction func move(_sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let second = storyboard.instantiateViewController(withIdentifier: "second")
-        self.present(second, animated: true, completion: nil)
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let second = storyboard.instantiateViewController(withIdentifier: "second") as! SecondViewController
+//        second.text1 = ""
+//        self.present(second, animated: true, completion: nil)
+//        navigationController?.pushViewController(second, animated: true)
+        performSegue(withIdentifier: "toSecond", sender: textview.text)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+   
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SecondViewController" {
-            _ = segue.destination as! SecondViewController
+        print(segue.identifier)
+        if segue.identifier! == "toSecond" {
+            print("now, segue to secondVC")
+            let dest = segue.destination as! SecondViewController
+            if sender != nil {
+                let data = sender as! String
+                dest.text1 = data
+            }
         }
         
     }

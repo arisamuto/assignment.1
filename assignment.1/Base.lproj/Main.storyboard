@@ -22,6 +22,9 @@
                                 <rect key="frame" x="162" y="517" width="90" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="moveWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXy-SL-tEM"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-jq-MoV">
                                 <rect key="frame" x="82" y="132" width="250" height="150"/>
@@ -36,8 +39,8 @@
                     </view>
                     <connections>
                         <outlet property="nextButton" destination="ggi-Xz-XLm" id="94d-Zs-auz"/>
-                        <outlet property="text" destination="2qd-jq-MoV" id="pcZ-RV-4a2"/>
-                        <segue destination="nAE-Sl-FY7" kind="show" identifier="toSecond" id="wJQ-8q-dGK"/>
+                        <outlet property="textview" destination="2qd-jq-MoV" id="sTI-nf-ee5"/>
+                        <segue destination="nAE-Sl-FY7" kind="show" identifier="toSecond" id="I4l-GE-MFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,7 +68,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="second" id="CLA-1R-PYW"/>
+                                    <action selector="move2With_sender:" destination="nAE-Sl-FY7" eventType="touchUpInside" id="aOa-kG-Qkz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yg-jI-0z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="117"/>
+            <point key="canvasLocation" x="1107" y="117"/>
         </scene>
     </scenes>
 </document>

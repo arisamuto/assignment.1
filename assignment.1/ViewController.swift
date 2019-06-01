@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet var textview: UITextView!
     @IBOutlet var nextButton: UIButton!
@@ -19,7 +19,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         
         view.backgroundColor = UIColor.cyan
-      
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     //ステータスバーを非表示にするためオーバーライドする
     override var prefersStatusBarHidden: Bool {

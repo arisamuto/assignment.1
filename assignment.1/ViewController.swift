@@ -30,11 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
     
     
     @IBAction func move(_sender: Any) {
-//        let storyboard: UIStoryboard = self.storyboard!
-//        let second = storyboard.instantiateViewController(withIdentifier: "second") as! SecondViewController
-//        second.text1 = ""
-//        self.present(second, animated: true, completion: nil)
-//        navigationController?.pushViewController(second, animated: true)
+
         performSegue(withIdentifier: "toSecond", sender: textview.text)
     }
     
